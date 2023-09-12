@@ -1,0 +1,22 @@
+﻿@charset "utf-8";
+
+$RACK_STANDARD_SIZE: 600px; 
+$UNITNO_FONTSIZE: 12px;
+$UNITNO_LINEHEIGHT: 1.2;
+$BORDER_WIDTH: 1px;
+$UNIT_MIN_HEIGHT: $UNITNO_FONTSIZE * $UNITNO_LINEHEIGHT;
+
+/* ユニットの高さ指定(～60列目) */
+@for $i from 1 through 60 {
+    @for $j from 1 through 100 {
+        .rack-table-#{$j}-#{$i} > tbody >tr {
+            $max-height: round($RACK_STANDARD_SIZE * $j / 100);
+            $td-height: round($max-height / $i);
+            @if $td-height <= $UNIT_MIN_HEIGHT {
+                $td-height: $UNIT_MIN_HEIGHT
+            }
+            /* trの高さ指定 */
+            height: $td-height !important;
+        }
+    }
+}

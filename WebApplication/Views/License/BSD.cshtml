@@ -1,0 +1,47 @@
+﻿@using System.Web.Optimization
+@using System.Configuration
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+
+    <title>BSDライセンス - @ConfigurationManager.AppSettings["Title"]</title>
+    @Styles.Render("~/styles/fonts")
+    @Styles.Render("~/styles/sitecss")
+    @Styles.Render("~/styles/bootstrap")
+    @switch (ConfigurationManager.AppSettings["Series"])
+    {
+        case "ME":
+            @Styles.Render("~/styles/garmit-me")
+            break;
+        case "SC":
+            @Styles.Render("~/styles/garmit-sc")
+            break;
+        default:
+            @Styles.Render("~/styles/garmit-dc")
+            break;
+    }
+</head>
+<body id="rootContainer" class="gdc-body">
+    <div class="mlr-2 mtb-2">
+        <h2>BSD-3-Clause License</h2>
+        <div class="mtb-2">
+            <ul>
+                <li>react-dnd</li>
+                <li>react-dnd-html5-backend</li>
+            </ul>
+        </div>
+        <hr />
+        <a href="/License"><i class="fa fa-undo"></i> Back</a>
+    </div>
+</body>
+</html>
+

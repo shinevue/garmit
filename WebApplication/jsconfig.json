@@ -1,0 +1,16 @@
+{
+	//jsconfig.json 形式に関するドキュメントは、
+	//https://go.microsoft.com/fwlink/?LinkId=759670 でご確認ください
+	"compilerOptions": {
+		"target": "es6",
+		"module": "commonjs",
+		"allowSyntheticDefaultImports": true
+	},
+	"exclude": [
+		"node_modules",
+		"bower_components",
+		"jspm_packages",
+		"tmp",
+		"temp"
+	]
+}

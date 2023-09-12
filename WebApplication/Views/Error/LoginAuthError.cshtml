@@ -1,0 +1,109 @@
+﻿
+@using System.Web.Optimization
+@using System.Configuration
+@using garmit.Web.Helpers
+
+@{
+    Layout = null;
+    string message = "5秒後にログイン画面に移ります。";
+    if (TempData["Message"] != null)
+    {
+        message = TempData["Message"].ToString() + message;
+    }
+    else
+    {
+        message = "ログイン認証に失敗しました。" + message;
+    }
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @*アプリケーション名*@
+    <title>ログイン認証エラー - @ConfigurationManager.AppSettings["Title"]</title>
+
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+
+    @*Bundle CSS, assuming includes Bootstrap CSS *@
+    @Styles.Render("~/styles/bootstrap")
+
+    @switch (ConfigurationManager.AppSettings["Series"])
+    {
+        case "ME":
+            @Styles.Render("~/styles/garmit-me")
+            break;
+        case "SC":
+            @Styles.Render("~/styles/garmit-sc")
+            break;
+        default:
+            @Styles.Render("~/styles/garmit-dc")
+            break;
+    }
+
+    @Styles.Render("~/styles/sitecss")
+
+    @*<script>
+            FontAwesomeConfig = { searchPseudoElements: true };
+        </script>
+        @Scripts.RenderFormat("<script src='{0}' defer></script>", "~/bundles/fontsdefer")*@
+
+
+</head>
+
+<
+<body class="login-page">
+    <div class="wrapper">
+        <div class="login-box">
+            <div class="login-box-body" id="rootContainer">
+                <div class="mtb-1 mlr-2">
+                    <h3 class="text-danger mb-2" style="text-align:center;font-weight:bold">
+                        <i class="fal fa-exclamation-triangle text-danger"></i>
+                        ログイン認証エラー
+                    </h3>
+                    <p>@message</p>
+                </div>
+                <div style="text-align:center">
+                    <button class="btn btn-link " onclick="location.href='/'">ログイン画面へ</button>
+                </div>
+            </div>
+        </div>
+        <footer class="lockscreen-footer">
+            <div>@AssemblyHelpers.GetCopyright()</div>
+            <div><a href="/License">LICENSE</a>&nbsp;Version @AssemblyHelpers.GetVersion()</div>
+        </footer>
+    </div>
+    <script type="text/javascript">
+
+        function startTimer() {
+            setTimeout(function () {
+                location.href = "/";
+            }, 5000);
+        }
+
+        if (document.readyState !== 'loading') {
+            startTimer();
+        } else {
+            document.addEventListener('DOMContentLoaded', startTimer);
+        }
+
+    </script>
+    @Scripts.Render("~/bundles/jquery")
+    @switch (ConfigurationManager.AppSettings["Series"])
+    {
+        case "ME":
+            @Scripts.Render("~/bundles/garmit-me")
+            break;
+        case "SC":
+            @Scripts.Render("~/bundles/garmit-sc")
+            break;
+        default:
+            @Scripts.Render("~/bundles/garmit-dc")
+            break;
+    }
+</body>
+
+</html>
+

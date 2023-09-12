@@ -1,0 +1,112 @@
+﻿@using System.Web.Optimization
+@using System.Configuration
+@using garmit.Web.Helpers
+@model garmit.Web.Models.ViewModel
+
+@{
+    string imageFolder = "";
+    switch (ConfigurationManager.AppSettings["Series"])
+    {
+        case "ME":
+            imageFolder = "/garmit-frame/garmit-me/img/";
+            break;
+        case "SC":
+            imageFolder = "/garmit-frame/garmit-sc/img/";
+            break;
+        default:
+            imageFolder = "/garmit-frame/garmit-dc/img/";
+            break;
+    }
+
+    string logoUrl = imageFolder + "logo-login.svg";
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="IE=Edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        @*アプリケーション名*@
+        <title>@Model.Title - @ConfigurationManager.AppSettings["Title"]</title>
+
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+        
+        @switch (ConfigurationManager.AppSettings["Series"])
+        {
+            case "ME":
+                @Styles.Render("~/styles/garmit-me")
+                break;
+            case "SC":
+                @Styles.Render("~/styles/garmit-sc")
+                break;
+            default:
+                @Styles.Render("~/styles/garmit-dc")
+                break;
+        }
+
+
+        @Styles.Render("~/styles/sitecss")
+    </head>
+
+    <body class="login-page">
+        <div class="wrapper">
+            <div class="login-box">
+                <div class="login-logo">
+                    <img src="@logoUrl" class="img-responsive img-login-logo">
+                </div>
+                <div class="login-box-body" id="rootContainer"></div>
+            </div>
+            <footer class="lockscreen-footer">
+                <div>@AssemblyHelpers.GetCopyright()</div>
+                <div><a href="/License">LICENSE</a>&nbsp;Version @AssemblyHelpers.GetVersion()</div>
+                @{
+                    if (ConfigurationManager.AppSettings["UseSsl"] == "true")
+                    {
+                        <div class="loginlogout-globalsign">
+                            <span id="ss_img_wrapper_2021gmogs_100-50_ja">
+                                <a href="https://jp.globalsign.com/" target="_blank" rel="nofollow">
+                                    <img alt="SSL　GMOグローバルサインのサイトシール" border="0" id="ss_img" src="//seal.globalsign.com/SiteSeal/images/gs_noscript_100-50_ja.gif">
+                                </a>
+                            </span>
+                            <script type="text/javascript" src="//seal.globalsign.com/SiteSeal/2021gmogs_100-50_ja.js" defer="defer"></script>
+                        </div>                        
+                    }
+                }
+            </footer>
+        </div>
+        
+        @*ライブラリ*@
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @Scripts.Render("~/bundles/react")
+        @Scripts.Render("~/bundles/redux")
+        @Scripts.Render("~/bundles/babel")
+
+        @switch (ConfigurationManager.AppSettings["Series"])
+        {
+            case "ME":
+                @Scripts.Render("~/bundles/garmit-me")
+                break;
+            case "SC":
+                @Scripts.Render("~/bundles/garmit-sc")
+                break;
+            default:
+                @Scripts.Render("~/bundles/garmit-dc")
+                break;
+        }
+
+        @* ViewBagの情報をセットする *@
+        <script type="text/javascript">
+            const application = {
+                appSettings: @HtmlHelpers.ToJson(Html, Model.AppSettings),
+                systemId: @HtmlHelpers.ToJson(Html, Model.SystemId)
+            };
+        </script>
+
+        @*ここを画面ごとのスクリプトを設定します。*@
+        @RenderBody()
+
+    </body>
+</html>
+

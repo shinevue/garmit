@@ -1,0 +1,199 @@
+﻿/**
+ * garmit ラック搭載図で使用するスタイル
+ * last modified 2017/12/25
+ *
+ */
+
+.rack-table,
+.table-multi-rack {
+    margin-bottom: 0px;
+    border: 1px solid #bbb;
+}
+
+.table-multi-rack {
+    table-layout: fixed;
+}
+
+.rack-table > tbody > tr > td,
+.table-multi-rack > tbody > tr > td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0px;
+    font-size: 12px;
+    border-color: #bbb;
+    line-height: 1.2;       /* とりあえずなので、再度検討する！ */
+    cursor: default;
+    background-repeat: no-repeat; 
+    background-size: 100% 100%;
+}
+
+.rack-table > tbody+tbody {
+    border-top: 1px;
+}
+
+.rack-table > tbody > tr > td:first-child,
+.table-multi-rack >tbody > tr > td:first-child {
+    width:30px;
+    background-color: #D5E8D4;
+}
+
+.rack-table-select > tbody:hover > tr > td:first-child {
+    background-color: #9cc491;
+}
+
+.rack-table > tbody > tr > td:nth-child(n+2),
+.table-multi-rack > tbody > tr > td:nth-child(n+2) {
+    background-color: #f7f7f7;
+}
+
+.rack-table-select > tbody > tr > td:nth-child(n+2),
+.table-multi-rack-select > tbody > tr > td:nth-child(n+2) {
+    cursor: pointer;
+}
+
+.rack-table-select > tbody:hover > tr > td:nth-child(n+2),
+.table-multi-rack-select > tbody > tr > td:hover:nth-child(n+2) {
+    background-color: #e7e7e7;
+}
+
+.rack-table > tbody.select-unit > tr > td:first-child { 
+    background-color: #8dbb81;
+}
+
+.rack-table > tbody.select-unit > tr > td:nth-child(n+2) { 
+    background-color: #ddd;
+}
+
+.rack-table > tbody > tr > td span.image-unit,
+.table-multi-rack > tbody > tr > td span.image-unit {
+    background: rgba(200, 200, 200, 0.5);
+}
+
+.rack-table > tbody > tr > td,
+.table-multi-rack > tbody > tr > td > div {
+    position: relative;
+}
+
+
+.rack-table > tbody > tr > td span.unit-badge,
+.table-multi-rack > tbody > tr > td span.unit-badge {
+    position: absolute;
+    left: 0px;
+    margin-left: 5px;
+}
+
+.rack-table > tbody > tr > td span.unit-badge > span, 
+.table-multi-rack > tbody > tr > td span.unit-badge > span {
+    border-radius: 50%;
+    /* background-color: #eed; alartと同じものを使用する */
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    border: 0.5px #5c5c5c solid;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 10px;
+    padding: 1px;
+}
+
+.rack-table > tbody > tr > td span.tools,
+.table-multi-rack > tbody > tr > td span.tools {
+    position: absolute;
+    right: 0px;
+    margin-right: 5px;
+}
+
+.rack-table > tbody > tr > td span.tools .btn,
+.table-multi-rack > tbody > tr > td span.tools .btn {
+    padding: 0.5px !important;
+    font-size: 8px !important;
+    line-height: 1.0 !important;
+    height: 12px;
+    width: 12px;
+    border-width: 0.5px;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.table-multi-rack td.select-unit {
+    outline: 2px solid #389723;
+}
+
+.table-multi-rack > tbody > tr:last-child > td {
+    background-color: #D5E8D4;
+    padding: 3px;
+    cursor: auto;
+}
+
+.table-multi-rack > tbody > tr:last-child {
+    height: 15px !important; 
+}
+
+.table-multi-rack > tbody > tr:last-child > td.select-column {
+    background-color: #8dbb81;
+}
+
+/* ========================================
+ * ユニットのハイライトスタイル
+ * ======================================== */
+.highlight-unit-right {
+    border: 2px #ff0000 solid !important;
+}
+
+.highlight-unit-left {
+    border: 2px #0000ff solid !important;
+}
+
+/* ========================================
+ * ユニットのドラッグ＆ドロップ用のスタイル
+ * ======================================== */
+
+/* ドロップ対象のユニット行 */
+.dorp-target-unitrow {
+    outline: 1px #389723 solid;
+}
+
+/* ドロップ対象 */
+.drop-traget-emptyrow {
+    background-color: #389723;
+}
+
+/* ========================================
+ * ラック搭載図ページネーションスタイル
+ * ======================================== */
+ .rack-table-pagination {
+     margin: 5px;
+     vertical-align: middle;
+ }
+
+.rack-table-pagination > .active > a,
+.rack-table-pagination > .active > span,
+.rack-table-pagination > .active > a:hover,
+.rack-table-pagination > .active > span:hover,
+.rack-table-pagination > .active > a:focus,
+.rack-table-pagination > .active > span:focus {
+  color: #333;
+  background-color: #b5bbc8;
+  border-color: #adadad;
+}
+
+
+/* ========================================
+ * ラック搭載図の見出しスタイル
+ * ======================================== */
+.rack-table-caption p {
+    height: 30px;
+    text-align: center;
+}
+
+.rack-table-caption .input-group-btn:first-child>.btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.rack-table-caption .input-group-btn:last-child>.btn {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}

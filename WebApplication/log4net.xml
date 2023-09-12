@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler,log4net" />
+  </configSections>
+  <log4net>
+
+    <!-- 通常ログ：分割ファイル出力 -->
+    <appender name="InfoLogDailyAppender" type="log4net.Appender.RollingFileAppender">
+
+      <!-- 作成するログファイル -->
+      <param name="File" value="C:\garmitLog\Tracelog" />
+
+      <!-- ファイル名の日付部分 -->
+      <param name="DatePattern" value='"_"yyyy-MM-dd".log"' />
+
+      <!-- ファイル名は日付ごと  ログファイル切替{ サイズ: Size, 日付: Date }-->
+      <param name="RollingStyle" value="date" />
+
+      <!-- ログ・ファイル名が固定ではないので“false”を指定 -->
+      <param name="StaticLogFileName" value="false" />
+
+      <!-- ファイル書き込み{ 追記: true, 上書き: false }-->
+      <param name="AppendToFile" value="true" />
+
+      <filter type="log4net.Filter.LevelRangeFilter">
+        <param name="LevelMax" value="FATAL" />
+        <param name="LevelMin" value="DEBUG" />
+      </filter>
+
+      <!-- ログ出力文字のフォーマット -->
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="ConversionPattern" value="%date [%thread] [%-5level] %class.%method(%line) - %message%n" />
+      </layout>
+    </appender>
+
+    <root>
+      <!-- ログのレベルを指定 -->
+      <!-- DEBUG以上のログを記録 -->
+      <level value="DEBUG" />
+      <!-- 使用する Appender -->
+      <appender-ref ref="InfoLogDailyAppender" />
+    </root>
+  </log4net>
+</configuration>

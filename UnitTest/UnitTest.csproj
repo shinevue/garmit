@@ -1,0 +1,179 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9FDD3DE1-FC52-4A46-AC9C-483AC082FE4E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>garmit.Web.UnitTest</RootNamespace>
+    <AssemblyName>UnitTest</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="garmit.ColumnOrderModel.Interface, Version=0.0.6690.40986, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\garmit.ColumnOrderModel.Interface.0.0.6690.40986\lib\net47\garmit.ColumnOrderModel.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="garmit.DomainObject, Version=0.0.7318.27639, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\garmit.DomainObject.0.0.7318.27639\lib\net47\garmit.DomainObject.dll</HintPath>
+    </Reference>
+    <Reference Include="garmit.ExtendedDataModel, Version=0.0.6666.31212, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\garmit.ExtendedDataModel.0.0.6666.31212\lib\net47\garmit.ExtendedDataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="garmit.ExtendedDataModel.Interface, Version=0.0.6666.31211, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\garmit.ExtendedDataModel.Interface.0.0.6666.31211\lib\net47\garmit.ExtendedDataModel.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="garmit.ExtendedDataService, Version=0.0.6669.26231, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\garmit.ExtendedDataService.0.0.6669.26231\lib\net47\garmit.ExtendedDataService.dll</HintPath>
+    </Reference>
+    <Reference Include="garmit.ExtendedDataService.Interface, Version=0.0.6669.26230, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\garmit.ExtendedDataService.Interface.0.0.6669.26230\lib\net47\garmit.ExtendedDataService.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="garmit.FloorMapModel.Interface, Version=0.0.7562.33017, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\garmit.FloorMapModel.Interface.0.0.7562.33017\lib\net47\garmit.FloorMapModel.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="garmit.FloorMapService, Version=0.0.6703.18388, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\garmit.FloorMapService.0.0.6703.18388\lib\net47\garmit.FloorMapService.dll</HintPath>
+    </Reference>
+    <Reference Include="garmit.FloorMapService.Interface, Version=0.0.6703.18387, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\garmit.FloorMapService.Interface.0.0.6703.18387\lib\net47\garmit.FloorMapService.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="garmit.Infrastructure, Version=0.0.7318.27521, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\garmit.Infrastructure.0.0.7318.27521\lib\net47\garmit.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="garmit.LoginUserModel.Interface, Version=0.0.6702.31829, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\garmit.LoginUserModel.Interface.0.0.6702.31829\lib\net47\garmit.LoginUserModel.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="garmit.LookUpModel.Interface, Version=0.0.6704.18284, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\garmit.LookUpModel.Interface.0.0.6704.18284\lib\net47\garmit.LookUpModel.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="garmit.OperationLogModel.Interface, Version=0.0.6690.37395, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\garmit.OperationLogModel.Interface.0.0.6690.37395\lib\net47\garmit.OperationLogModel.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="garmit.RackModel.Interface, Version=0.0.6701.34843, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\garmit.RackModel.Interface.0.0.6701.34843\lib\net47\garmit.RackModel.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="garmit.RdbDataSource.Interface, Version=0.0.6705.15624, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\garmit.RdbDataSource.Interface.0.0.6705.15624\lib\net47\garmit.RdbDataSource.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="garmit.Utility, Version=0.0.6689.33252, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\garmit.Utility.0.0.6689.33252\lib\net47\garmit.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="garmit.ValueDataModel.Interface, Version=0.0.6701.19993, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\garmit.ValueDataModel.Interface.0.0.6701.19993\lib\net47\garmit.ValueDataModel.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.config" />
+    <Content Include="log4net.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\WebApplication\WebApplication.csproj">
+      <Project>{0adbce56-1708-4035-883c-1cbfd681cb1c}</Project>
+      <Name>WebApplication</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>このプロジェクトは、このコンピューター上にない NuGet パッケージを参照しています。それらのパッケージをダウンロードするには、[NuGet パッケージの復元] を使用します。詳細については、http://go.microsoft.com/fwlink/?LinkID=322105 を参照してください。見つからないファイルは {0} です。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets'))" />
+  </Target>
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

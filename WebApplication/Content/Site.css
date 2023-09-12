@@ -1,0 +1,2272 @@
+﻿textarea {
+    resize: vertical;
+    min-height: 50px;
+}
+
+input[disabled] {
+    color: #888888;
+}
+
+select[disabled]{
+    color: #888888;
+}
+
+textarea[disabled]{
+    color: #888888;
+}
+
+/* メニューアイコン */
+.icon-garmit-battery, 
+.icon-garmit-demand-graph, 
+.icon-garmit-category-consumer,
+.icon-garmit-eleckey-map, .btn-garmit-eleckey-map,
+.icon-garmit-category-operation,
+.icon-garmit-category-line, .btn-garmit-category-line {
+    text-align: left;
+    display: inline-block;
+}
+
+.icon-garmit-battery:before, 
+.icon-garmit-demand-graph:before, 
+.icon-garmit-category-consumer:before,
+.icon-garmit-eleckey-map:before, .btn-garmit-eleckey-map:before,
+.icon-garmit-category-operation:before,
+.icon-garmit-category-line:before, .btn-garmit-category-line:before {
+    display: inline-block;
+    font-size: 1em;
+    position: relative;
+    line-height: 1;
+    width: 1em;
+    margin-left: 0em;
+    margin-right: 0.4em;
+}
+
+.icon-garmit-battery:before {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 300;
+    content: "\f376";
+}
+
+.icon-garmit-demand-graph:before {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 300;
+    content: "\f012";
+}
+
+.icon-garmit-eleckey-map:before, .btn-garmit-eleckey-map:before {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 300;
+    content: "\f30d";
+}
+
+.icon-garmit-category-line:before, .btn-garmit-category-line:before {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 300;
+    content: "\f387";
+}
+
+.garmit-menu-item.icon-garmit-battery:before, 
+.garmit-menu-item.icon-garmit-demand-graph:before,
+.garmit-menu-item.icon-garmit-battery:before,
+.garmit-menu-item.icon-garmit-eleckey-map:before {
+    width: 1.2em;
+    margin-right: 0.4em;
+}
+
+/* Material Icons用 */
+.icon-garmit-category-consumer:before, .btn-garmit-category-consumer:before {
+    top: 0.15em;
+    margin-right: 0.35em;
+}
+
+.garmit-menu-item.icon-garmit-category-consumer:before {
+    -webkit-transform: scale(1.2375);
+    -ms-transform: scale(1.2375);
+    transform: scale(1.2375);
+}
+
+.icon-garmit-category-consumer:before, .btn-garmit-category-consumer:before {
+    font-family: "Material Icons";
+    content: "\e7fb";
+}
+
+.icon-garmit-category-operation:before {
+    font-family: "Material Icons";
+    content: "\e913";
+    /*反転*/
+    -webkit-transform: scale(-1.2375, 1.2375);
+    -ms-transform: scale(-1.2375, 1.2375);
+    transform: scale(-1.2375, 1.2375);
+    margin-right: 0.6em;
+}
+
+/* ボタンアイコン追加 */
+.btn-garmit-category-consumer,
+.btn-garmit-eleckey-map,
+.btn-garmit-category-line {
+    color: #fff;
+    background-color: #4D6290;
+    border-color: #44577f;
+}
+
+.btn-garmit-category-consumer:focus, .focus.btn-garmit-category-consumer,
+.btn-garmit-eleckey-map:focus,  .focus.btn-eleckey-map,
+.btn-garmit-category-line:focus, .focus.btn-garmit-category-line {
+    color: #fff;
+    background-color: #3b4b6f;
+    border-color: #181e2c;
+}
+
+.btn-garmit-category-consumer:hover,
+.btn-garmit-eleckey-map:hover,
+.btn-garmit-category-line:hover {
+    color: #fff;
+    background-color: #3b4b6f;
+    border-color: #181e2c;
+}
+
+.btn-garmit-category-consumer:active, .active.btn-garmit-category-consumer,
+.btn-garmit-eleckey-map:active, .active.btn-garmit-eleckey-map,
+.btn-garmit-category-line:active, .active.btn-garmit-category-line,
+.open > .dropdown-toggle.btn-garmit-category-consumer,
+.open > .dropdown-toggle.btn-garmit-eleckey-map,
+.open > .dropdown-toggle.btn-garmit-category-line {
+    color: #fff;
+    background-color: #3b4b6f;
+    border-color: #2f3c58;
+}
+
+.btn-garmit-category-consumer:active:hover, .btn-garmit-category-consumer:active:focus, .btn-garmit-category-consumer:active.focus .active.btn-garmit-category-consumer:hover, .active.btn-garmit-category-consumer:focus, .active.focus.btn-garmit-category-consumer,
+.btn-garmit-eleckey-map:active:hover, .btn-garmit-eleckey-map:active:focus, .btn-garmit-eleckey-map:active.focus, .active.btn-garmit-eleckey-map:hover, .active.btn-garmit-eleckey-map:focus, .active.focus.btn-garmit-eleckey-map,
+.btn-garmit-category-line:active:hover, .btn-garmit-category-line:active:focus, .btn-garmit-category-line:active.focus, .active.btn-garmit-category-line:hover, .active.btn-garmit-category-line:focus, .active.focus.btn-garmit-category-line,
+.open > .dropdown-toggle.btn-garmit-category-consumer:hover,
+.open > .dropdown-toggle.btn-garmit-eleckey-map:hover,
+.open > .dropdown-toggle.btn-garmit-category-line:hover,
+.open > .dropdown-toggle.btn-garmit-category-consumer:focus,
+.open > .dropdown-toggle.btn-garmit-eleckey-map:focus,
+.open > .dropdown-toggle.btn-garmit-category-line:focus,
+.open > .dropdown-toggle.focus.btn-garmit-category-consumer,
+.open > .dropdown-toggle.focus.btn-garmit-eleckey-map,
+.open > .dropdown-toggle.focus.btn-garmit-category-line {
+    color: #fff;
+    background-color: #2f3c58;
+    border-color: #181e2c;
+}
+
+.btn-garmit-category-consumer:active, .active.btn-garmit-category-consumer,
+.btn-garmit-eleckey-map:active, .active.btn-garmit-eleckey-map, 
+.btn-garmit-category-line:active, .active.btn-garmit-category-line,
+.open > .dropdown-toggle.btn-garmit-category-consumer, 
+.open > .dropdown-toggle.btn-garmit-eleckey-map,
+.open > .dropdown-toggle.btn-garmit-category-line {
+    background-image: none;
+}
+
+.disabled.btn-garmit-category-consumer:hover, .disabled.btn-garmit-category-consumer:focus, .disabled.focus.btn-garmit-category-consumer, .btn-garmit-category-consumer[disabled]:hover, .btn-garmit-category-consumer[disabled]:focus, .btn-garmit-category-consumer[disabled].focus,
+.disabled.btn-garmit-eleckey-map:hover, .disabled.btn-garmit-eleckey-map:focus, .disabled.focus.btn-garmit-eleckey-map, .btn-garmit-eleckey-map[disabled]:hover, .btn-garmit-eleckey-map[disabled]:focus, .btn-garmit-eleckey-map[disabled].focus,
+.disabled.btn-garmit-category-line:hover, .disabled.btn-garmit-category-line:focus, .disabled.focus.btn-garmit-category-line, .btn-garmit-category-line[disabled]:hover, .btn-garmit-category-line[disabled]:focus, .btn-garmit-category-line[disabled].focus,
+fieldset[disabled] .btn-garmit-category-consumer:hover,
+fieldset[disabled] .btn-garmit-eleckey-map:hover,
+fieldset[disabled] .btn-garmit-category-line:hover,
+fieldset[disabled] .btn-garmit-category-consumer:focus,
+fieldset[disabled] .btn-garmit-eleckey-map:focus,
+fieldset[disabled] .btn-garmit-category-line:focus,
+fieldset[disabled] .focus.btn-garmit-category-consumer,
+fieldset[disabled] .focus.btn-garmit-eleckey-map,
+fieldset[disabled] .focus.btn-garmit-category-line {
+    background-color: #4D6290;
+    border-color: #44577f;
+}
+
+.btn-garmit-category-consumer .badge,
+.btn-garmit-eleckey-map .badge,
+.btn-garmit-category-line .badge {
+    color: #4D6290;
+    background-color: #fff;
+}
+
+.btn-garmit-category-consumer {
+    text-align: left;
+    display: inline-block;
+}
+
+.btn-garmit-category-consumer:before {
+    display: inline-block;
+    font-size: 1em;
+    position: relative;
+    line-height: 1;
+    width: 1em;
+    margin-left: 0em;
+    margin-right: 0.4em;
+}
+
+/* エラーメッセージの色 */
+.text-error {
+    color: #a94442;
+}
+
+/* ユーザーパネル ユーザーアイコン */
+.img-circle {
+    background: #d3d3d3;
+    padding: 3px;
+}
+
+/* ボックスのヘッダー部分に+アイコン付きボタンを使用するときはアイコン固定 */
+.fa.fa-minus.fix-plus:before {
+    content: "\f067";
+}
+
+/* 一定の幅以上になる場合はテキストを省略（...）する */
+.ellipsis-container :first-child {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* 一定の幅以上になる場合はテキストを表示しない */
+.text-hidden {
+    overflow: hidden;
+}
+
+/* flexで縦横中央ぞろえ */
+.flex-center {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+/* flexで縦中央横左ぞろえ */
+.flex-center-left {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+/* flexで縦中央横右ぞろえ */
+.flex-center-right {
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+}
+
+/* flexで縦中央両端配置 */
+.flex-center-between {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+/* flexで縦中央横両端ぞろえ */
+.flex-center-end {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* flexで上ぞろえ中央寄せ */
+.flex-top-center {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* flexで上ぞろえ左寄せ */
+.flex-top-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* flexで上ぞろえ両端配置 */
+.flex-top-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* flexで下ぞろえ左寄せ */
+.flex-bottom {
+    display: flex;
+    align-items: flex-end;
+}
+
+/* flexで縦に均等に並べる */
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+/* flexで縦に均等に並べて左寄せ */
+.flex-column-left {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: flex-end;
+}
+
+/* flexで縦に均等に並べて中央寄せ */
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content:center;
+}
+
+/* flexで縦に並べて端に配置 */
+.flex-column-between {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+/* flexで両端配置下ぞろえ */
+.flex-between-end {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* flexでベースラインにそろえる */
+.flex-baseline {
+    display: flex;
+    align-items: baseline;
+}
+
+/* flex折り返しcontainer */
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+/* colの高さをそろえる */
+.row > .row-eq-height {
+    display: flex;
+}
+
+/* 計測値表示ラベルのスタイル */
+.value-label {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+    .value-label > div {
+        height: 34px;
+    }
+
+    .value-label strong {
+        font-size: 25px;
+        font-weight: normal;
+    }
+
+.value-display {
+    stroke: rgb(0, 0, 0);
+    stroke-width: 1;
+    fill:white;
+}
+.value-display-value {
+    font-weight: normal;
+}
+.text-large {
+    font-size: 18px;
+}
+.text-medium {
+    font-size: 15px;
+}
+.text-small {
+    font-size: 12px;
+}
+.value-display-unit {
+    font-size: 9px;
+}
+
+.value-display-rect {
+    fill-opacity: 0;
+}
+
+
+/* 分電盤図の電源設備オブジェクトのスタイル */
+.elec-facility-name{
+    font-size:12px;
+}
+
+/* 計測値表示の文字色 */
+.text-danger {
+    color: #D9374B;
+}
+
+.text-warning {
+    color: #D6A80F;
+}
+
+.text-success {
+    color: #48A06D;
+}
+
+/* 計測値表示の文字色 */
+.font-alarm {
+    color: red;
+}
+.font-error {
+    color: yellow;
+}
+.font-normal {
+    color: white;
+}
+
+/* データテーブルホバー時のハイライト */
+td.highlight {
+    background-color: whitesmoke !important;
+}
+
+/*文字を太くする*/
+.boldText{
+    font-weight:bold;
+}
+
+/*文字を通常の太さにする*/
+.normalText{
+    font-weight:normal !important;
+}
+
+/* データテーブル選択時の行背景色 */
+.datatable-select-row {
+    background-color: rgba(51,122,183,0.5) !important;
+}
+
+/* データテーブルのチェック行の背景色 */
+.datatable-check-row {
+    background-color: #4D6290 !important;
+    color: #fff !important;
+}
+
+/* データレポートテーブルのデータなしメッセージのスタイル*/
+#dataReportTable .dataTables_empty {
+    padding-left:50px;
+    text-align:left !important;
+}
+
+/* アラーム情報設定テーブルのセルの背景色 */
+.alarm-info-table .error-row {
+    background-color: pink !important;
+}
+
+.alarm-info-table .alarm-row {
+    background-color: lightgoldenrodyellow !important;
+}
+
+
+/* 縦スクロールバー表示 */
+.scroll-y {
+    overflow-y: scroll;
+}
+
+/* パネル用縦スクロール設定 */
+.scroll-y.panell {
+    margin: -15px;
+    padding: 15px
+}
+
+/* スクロールバー auto Max-Hight=200px */
+.scroll-y-auto {
+    overflow-y: auto;
+    max-height: 200px;
+} 
+
+/* オブジェクトを透明にする */
+.transparent-object {
+    fill-opacity:0;
+}
+.fill-object {
+    fill-opacity: 1;
+}
+
+/* クリック・タップを無効化する */
+.through-object {
+    pointer-events: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* 通常オブジェクトのスタイル */
+.normal-object {
+    stroke-width: 1;
+}
+
+/* 選択中オブジェクトのスタイル */
+.select-object {
+    stroke: #4169e1!important; 
+    stroke-width: 2 !important;
+}
+
+/* 選択可能オブジェクトのスタイル */
+.selectable-object:hover {
+    fill-opacity: 0.5;
+    cursor: pointer;
+}
+
+/* 電気錠ステータスオブジェクトのスタイル */
+.key-status-object {
+    fill-opacity: 0.5;
+    /* stroke-width: 2; */
+}
+
+/* カメラ画像表示モーダルのスタイル */
+.contents {
+    max-width: 600px;
+    margin: auto;
+}
+
+.svg-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* SVG高さ / SVG幅 * 100 */
+}
+
+.svg-wrapper svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 空きラック表示枠のスタイル */
+.empty-rack {
+    stroke: rgba(255,255,0,0.8);
+    stroke-width: 5 !important;
+}
+.empty-rack-select {
+    stroke: rgba(255, 0, 0, 0.8);
+    stroke-width: 2 !important;
+}
+.empty-rack:hover,
+.empty-rack-select:hover {
+    fill: rgba(0,0,0,0);
+    stroke-width: 2 !important;
+}
+
+/* 日付選択用カレンダーを左側に展開する（右端をそろえる） */
+.left-datepicker > .rdt > .rdtPicker {
+    right: 0px;
+}
+
+/* 表内の datePicker の th には着色しない */
+.table .rdtPicker th {
+    background-color: transparent;
+}
+
+/* react-svg-pan-zoom凡例付きミニチュア表示 */
+.legend-miniature-min {
+    width: 190px !important;
+}
+.legend-miniature-max {
+    width: 280px !important;
+}
+
+/* 電気錠ステータス凡例 */
+.key-status-legend-miniature {
+    width: 500px !important;
+}
+
+#keyLegendDivContainer {
+    /* width: 176px !important; */
+    display: inline-block;
+    height: 80px;
+    position: absolute;
+    overflow: auto;
+}
+
+#keyLegendDivContainer > div {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    #keyLegendDivContainer {
+        width: 178px !important;
+    }
+
+    .key-status-legend-miniature {
+        width: 280px !important;
+    }
+}
+
+/* 配置をrelativeにする */
+.position-relative {
+    position: relative;
+}
+
+/* テキストを選択不可にする */
+.text-unselectable {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+/* フォームコントロールの幅をautoに*/
+.form-control.width-auto {
+    width: auto;
+}
+
+/* ========================================
+ * グラフィックメンテナンス用のスタイル
+ * ======================================== */
+.resize-points {
+    fill-opacity: 0;
+    fill:white;
+    stroke:transparent;
+}
+    .resize-points:hover,
+    .resize-points:active {
+        fill-opacity: 1;
+        stroke: rgba(192,192,192,0.5);
+    }
+
+/* ========================================
+ * 並べ替えリスト用のスタイル
+ * ======================================== */
+.sortable-list {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.sortable-list .sortable-list-item {
+    border-radius: 2px;
+    padding: 10px;
+    background: #f4f4f4;
+    margin: 2px 0px;
+    border-left: 2px solid #e6e7e8;
+    color: #444;
+}
+
+.sortable-list .ui-state-disabled + .sortable-list-item,
+.sortable-list .sortable-list-item + .ui-state-disabled
+{
+    margin-top: 4px;
+}
+
+.sortable-list .handle {
+    display: inline-block;
+    cursor: move;
+    margin: 0px 5px;
+}
+
+.sortable-list .move-target {
+    margin:4px 0px;
+    background: #f4f4f4;
+    border: 1px dashed #ddd;
+    height:42px;
+}
+
+.sortable-list .fixed {
+    background: #fcf2cf;
+    border-left: 2px solid #f3c62f;
+}
+
+/*並べ替えボタン付き検索フォーム*/
+.sort-button-search{
+    margin-top:14px;
+}
+/* ========================================
+ * 電源系統表示画面用のスタイル
+ * ======================================== */
+
+/* 電源系統表示枠のスタイル */
+.select-breaker-right {
+    stroke: #bb0042;
+    stroke-width: 2;
+}
+
+.select-breaker-left {
+    stroke: #1e3cb9;
+    stroke-width: 2;
+}
+
+/* ラック電源名称タブのスタイル */
+.elecname-tab {
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    background-color: white;
+    border: solid 2px;
+    padding: 10px 0px;
+    cursor:pointer;
+    max-width:24px;
+}
+
+.elecname-tab-right {
+    border-color: #bb0042;
+}
+
+.elecname-tab-right.select {
+    background-color: #bb0042;
+    color:white;
+}
+
+.elecname-tab-left {
+    border-color: #1e3cb9;
+}
+    .elecname-tab-left.select {
+        background-color: #1e3cb9;
+        color:white;
+    }
+
+/* 角の丸さ */
+.rounded-0 {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+/* ========================================
+ * アコーディオンのスタイル
+ * ======================================== */
+.accordion {
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+    border-top: 1px solid #ddd;
+}
+
+.accordion__header {
+    background-color: #f5f5f5;
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+    .accordion__header:hover {
+        background-color: #eee;
+    }
+
+.accordion__body {
+    padding: 8px;
+}
+
+/* WAI-ARIA */
+.accordion div[aria-hidden] {
+    display: none;
+}
+
+.accordion div[aria-hidden="false"] {
+    display: block;
+}
+
+
+/* ========================================
+ * リアルタイムモニタのスタイル
+ * ======================================== */
+.muuri-container {
+    overflow: auto;
+    min-height: 50px;
+    border: 1px solid #ccc;
+    padding: 10px 0px 0px 5px;
+    resize: vertical;
+}
+
+.muuri-grid {
+    position: relative;
+}
+
+    .muuri-grid .item {
+        position: absolute;
+    }
+
+/* bootstrap-garmit-dcの上書き */
+.realtime-box {
+    min-width: 305px;
+}
+
+/* ========================================
+ * トレンドグラフのスタイル
+ * ======================================== */
+.graph-legend {
+    border: 1px solid #ddd;
+    font-size: 11px;
+}
+
+.graph-legend>tr>td {
+    padding-top: 0.5em;
+    padding-right: 0.2em;
+}
+
+.graph-legend div {
+    cursor: pointer;
+}
+
+.graph-legend>tr>td:first-child {
+    padding-left: 0.2em;
+}
+
+.graph-legend>tr:last-child>td {
+    padding-bottom: 0.5em;
+}
+
+
+/* ========================================
+ * マウスオーバー表示切替アイコンのスタイル
+ * ======================================== */
+
+.hover-content {
+    opacity: 0;
+}
+
+.hover-target {
+    position: relative;
+}
+
+.hover-target:hover .hover-content {
+    opacity: 1;
+}
+
+.hover-icon {
+    cursor: pointer;
+    opacity: 0.5;
+    font-style: normal;
+}
+
+.hover-icon:hover {
+    opacity: 1;
+}
+
+.hover-icon.icon-garmit-edit,
+.hover-icon.icon-garmit-delete {
+    font-size: 18px;
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+}
+
+a.hover-icon {
+    color: #333;
+}
+
+/* ========================================
+ * 表示項目設定フォームのスタイル
+ * ======================================== */
+.block-list-item:hover {
+    color: #337ab7;
+    opacity: 0.8;
+}
+
+.block-list-title {
+    padding: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* ========================================
+ * vertical-align指定
+ * ======================================== */
+.va-t {
+    vertical-align: top !important;
+}
+
+.va-m {
+    vertical-align: middle !important;
+}
+
+.va-b {
+    vertical-align: bottom !important;
+}
+
+/* ========================================
+ * margin指定
+ * ======================================== */
+ 
+.mt-0 {
+    margin-top: 0 !important;
+}
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+.mr-0 {
+    margin-right: 0 !important;
+}
+.ml-0 {
+    margin-left: 0 !important;
+}
+.mt-05 {
+    margin-top: 5px;
+}
+.mb-05 {
+    margin-bottom: 5px !important;
+}
+.mr-05 {
+    margin-right: 5px;
+}
+.ml-05 {
+    margin-left: 5px;
+}
+.mt-1 {
+    margin-top: 10px;
+}
+.mb-1 {
+    margin-bottom: 10px;
+}
+.mr-1 {
+    margin-right: 10px;
+}
+.ml-1 {
+    margin-left: 10px;
+}
+.mt-2 {
+    margin-top: 20px;
+}
+.mb-2 {
+    margin-bottom: 20px;
+}
+.mr-2 {
+    margin-right: 20px;
+}
+.ml-2 {
+    margin-left: 20px;
+}
+.mtb-0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+.mlr-0 {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+.mtb-05 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.mlr-05 {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.mtb-1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.mlr-1 {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.mtb-2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.mlr-2 {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+/* ========================================
+ * padding指定
+ * ======================================== */
+
+.pa-0 {
+    padding: 0 !important;
+}
+.pa-05 {
+    padding: 5px;
+}
+.pa-1 {
+    padding: 10px;
+}
+.pa-15 {
+    padding: 15px;
+}
+.pa-2 {
+    padding: 20px;
+}
+
+.pa-t-05 {
+    padding-top: 5px !important;
+}
+
+.pa-t-1 {
+    padding-top: 10px;
+}
+
+.pa-t-2{
+    padding-top: 20px;
+}
+
+.pa-b-05{
+    padding-bottom: 5px !important;
+}
+
+.pa-l-0 {
+    padding-left: 0px !important;
+}
+
+.pa-l-1 {
+    padding-left: 10px !important;
+}
+
+.pa-l-15 {
+    padding-left: 15px !important;
+}
+
+.pa-r-0 {
+    padding-right: 0px !important;
+}
+
+.pa-r-1 {
+    padding-right: 10px !important;
+}
+
+.pa-r-2 {
+    padding-right: 20px !important;
+}
+
+.pa-r-3 {
+    padding-right: 30px !important;
+}
+
+/* ========================================
+ * text-align指定
+ * ======================================== */
+
+.ta-l {
+    text-align: left !important;
+}
+.ta-r {
+    text-align: right !important;
+}
+.ta-c {
+    text-align: center !important;
+}
+.ta-j {
+    text-align: justify !important;
+}
+
+/* ========================================
+ * 共通スタイル
+ * ======================================== */
+
+/* floatを強制的にnoneにする */
+.float-none {
+    float: none !important;
+}
+
+/* display: inline-block */
+.inline-block {
+    display: inline-block;
+}
+
+/* ========================================
+ * 入力フォームのスタイル
+ * ======================================== */
+.garmit-input-form div.input-row {
+    border: 1px solid #CCC;
+    border-bottom: 0px;
+    background-color: #C7DDEF;
+    min-height: 44px;
+}
+
+.garmit-input-form div.input-row:last-child {
+    border-bottom: 1px solid #CCC;
+}
+
+.garmit-input-form div.input-row > div {
+    border-left: 1px solid #CCC;
+}
+
+.garmit-input-form div.input-row > div:first-child {
+    border-left: 0px !important;
+}
+
+.garmit-input-form div.input-row > [class*='col-'] > .row > div:last-child,
+.garmit-input-form div.input-row .input-table-col {
+    border-left: 1px solid #CCC;
+    background-color: #FFF;
+}
+
+/* 入力フォーム内のFormGroupのmarignは0とする */
+.garmit-input-form div.input-row .row > div:last-child .form-group,
+.garmit-input-form div.input-row .input-table-col .form-group,
+.garmit-input-form .select-option-input-form .form-group
+{
+    margin: 0px !important;
+}
+
+/* 入力フォームリスト内のチェックボックスラベルのマージンを0とする */
+.garmit-input-form div.input-row .input-table-col >div label {
+    margin-bottom: 0px;
+}
+
+.garmit-input-form div.input-row > [class*='col-'] > .row > div:first-child .control-label {
+    text-align: left;
+}
+
+.garmit-input-form div.input-row > [class*='col-'] > .row > div:first-child {
+    padding-bottom: 12px !important;
+}
+
+@media screen and (max-width: 768px) {
+    .garmit-input-form div.input-row > div {
+	    border-left: 0px !important;
+	}
+    .garmit-input-form div.input-row .row > div:last-child {
+	    border-left: 0px !important;
+    }
+    .garmit-input-form div.input-row [class*='col-']:not(:last-child) .row > div:last-child {
+        border-bottom: 1px solid #CCC;
+    }
+    .garmit-input-form div.input-row > [class*='col-'] > .row > div:first-child {
+        border-bottom: 1px solid #CCC;
+    }
+    .garmit-input-form div.input-row > [class*='col-'] > .row > div:first-child {
+        padding-bottom: 0px !important;
+    }
+}
+
+/* InputFormの下にフォームを追加する場合に使用 */
+.garmit-input-form-under-row {
+    padding: 10px;
+    border: 1px solid #CCC;
+    border-top: 0px; 
+}
+
+/* ========================================
+ * インプットフォームリスト用のスタイル
+ * ======================================== */
+table.garmit-input-table > tbody > tr.input-table-item-row > td.input-table-col > div.form-group {
+    margin-bottom: 0px;
+}
+
+.garmit-input-header {
+    background-color: #C7DDEF;
+}
+
+/*指定したフォームグループの入力フォームの背景色をグレーにする*/
+.disable-formgroup input,
+.disable-formgroup select,
+.disable-formgroup textarea
+{
+    background-color: #eee;
+}
+
+/*無効な行の背景色をグレーにする*/
+.input-table-item-row.disable-row {
+    background-color: #eee;
+}
+
+/*セルの高さの小数点以下のずれを調整*/
+.input-table-item-row input.form-control,
+.input-table-item-row select.form-control {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+@media screen and (min-width:768px) {
+    table.garmit-input-table {
+
+    }
+    table.garmit-input-table > tbody > tr.input-table-item-row > td,
+    table.garmit-input-table >thead > tr > th {
+        border: none;
+        border: 1px solid #CCC;
+        border-collapse: collapse;
+    }
+    table.garmit-input-table >thead > tr > th {
+        border-bottom: none;
+    }
+    table.garmit-input-table >thead > tr:last-child > th {
+        border-bottom: 1px solid #CCC;
+    } 
+}
+
+@media screen and (max-width:768px) {
+    /*IE用にdisplayのテーブルを解除*/
+    table.garmit-input-table {
+        display: block;
+        overflow-y:auto;
+        border: 0px;
+    }
+        table.garmit-input-table > tbody {
+            display: block;
+        }
+
+    .input-table-item-row {
+        display: flex;
+        flex-flow: row wrap;
+        margin-bottom: 20px;
+    }
+    tbody > tr.input-table-item-row > th,
+    tbody > tr.input-table-item-row > td {
+        float:left;
+        border:none;
+        border: 1px solid #CCC;
+        border-top:none;
+    }
+    tbody > tr.input-table-item-row > td{
+        border-left:none;
+    }
+    tbody > tr.input-table-item-row td:nth-of-type(1),
+    tbody > tr.input-table-item-row th:nth-of-type(1) {
+        border-top: 1px solid #CCC;
+    }
+}
+
+
+/* セルの高さが異なっても、入力フォームが崩れないようにする */
+@media screen and (min-width: 768px) {
+	.garmit-input-form div.input-row .row {
+        display: -webkit-flex; /* Safari */
+        display: -ms-flexbox;  /* IE */
+    	display: flex;
+    	flex-wrap: wrap;
+	}
+   	.garmit-input-form div.input-row  {
+        display: -webkit-flex; /* Safari */
+        display: -ms-flexbox;  /* IE */
+    	display: flex;
+    	flex-wrap: wrap;
+	}
+     .garmit-input-form div.input-row > [class*='col-']  {
+    	/* display: -ms-grid; */	/* IE11 */
+    	display: grid;
+	}
+    .garmit-input-form div.input-row > [class*='col-'] > .row > div:first-child {
+	    display: block;
+    }
+}
+
+/* ========================================
+ * Inputを並べる
+ * ======================================== */
+.garmit-input-group {
+    display: table;
+    width: 100%;
+}
+
+.garmit-input-item {
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+.garmit-input-item:last-child {
+    padding-right: 0px;
+}
+
+.garmit-input-addon {
+    width: 1%;
+    white-space: nowrap;
+}
+
+/* ========================================
+ * トーストの大きさを変更
+ * ======================================== */
+@media screen and (min-width: 768px) {
+    .jq-toast-wrap {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .jq-toast-wrap {
+        width: 300px;
+    }
+}
+
+/* ========================================
+ * ボタン横にテキストを表示する
+ * ======================================== */
+button+span.button-inline-span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* ========================================
+ * ロケーションパンくずリストのスタイル
+ * ======================================== */
+.location-breadcrumb:not(.location-path),
+.layout-breadcrumb{
+    font-size: 12px;
+    padding-left: 10px;
+    border-radius: 0px;
+    padding: 8px 15px;
+    list-style: none;
+}
+
+.location-breadcrumb:not(.location-path) > li,
+.layout-breadcrumb:not(.location-path) > li{
+    color: #444;
+    text-decoration: none;
+    display: inline-block;
+    cursor: auto;
+}
+
+.location-breadcrumb:not(.location-path) > li + li:before,
+.layout-breadcrumb > li + li:before {
+    content: '>\00a0';      /* 区切りを">"にする */
+    color: #97a0b3;
+    padding: 0 5px;
+}
+
+.location-select .location-breadcrumb:not(.location-path),
+.layout-select .layout-breadcrumb {
+    margin-left: 10px;
+    margin-bottom: 0px !important;
+    background: #DADADA;
+    display: inline-block;
+}
+
+.rack-header > ol.location-path > li:last-child,
+.location-select ol.location-breadcrumb > li:last-child,
+.layout-select ol.layout-breadcrumb > li:last-child {
+    font-weight: bold;
+    font-size: 12px;
+} 
+
+@media screen and (max-width: 768px) {
+    .location-select .breadcrumb,
+    .layout-select .breadcrumb {
+        margin-top: 5px;
+        margin-left: 0px !important;
+        display: block;
+    }
+
+    .location-select,
+    .layout-select {
+        margin-top: 0px !important;
+    }
+}
+
+/* ========================================
+ * ボックスBodyにボーダーをつける
+ * ======================================== */
+.box-body.with-border {
+    border-bottom: 1px solid #f4f4f4;
+}
+
+/* ========================================
+ * DataTaleのスタイル
+ * ======================================== */
+
+ /* 幅を100%とする */
+.table-responsive {
+    width: 100%;
+}
+
+/* ソートアイコンのスタイル */
+.sorting-icon {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    display: block;
+    cursor: pointer;
+}
+
+/* フィルターアイコンのスタイル */
+.filtering-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: block;
+}
+
+/* ヘッダーのスタイル */
+.table-header {
+    background-color: #C7DDEF;
+}
+/* ========================================
+ * QuickLauncherのスタイル
+ * ======================================== */
+.quick-launcher-popover {
+    min-width: 276px;
+}
+
+.quick-launcher-popover button {
+    white-space: normal;
+}
+
+/* ========================================
+ * プログレスバーのスタイル
+ * ======================================== */
+ .progress-bar-gray {
+    background-color: #b5bbc8
+}
+
+/* ========================================
+ * ドロップダウンにプレビューボックスを追加
+ * ======================================== */
+.dropdown .dropdown-preview {
+    width: 20px;
+    height: 20px;
+    border: solid 1px #222;
+    margin-right: 5px;
+    float: left;
+    z-index: 0;
+}
+
+.dropdown .dropdown-preview .dropdown-preview-inner {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+/* ========================================
+ * ドロップダウンのスタイル
+ * ======================================== */
+.dropdown-select > button,
+.dropdown-status > button {
+    border-radius: 0px;
+}
+
+.dropdown-select > ul,
+.dropdown-status > ul {
+    border-radius: 0px;
+    margin-top: 0px;
+}
+
+.form-group.has-success .dropdown-select > button,
+.form-group.has-success .dropdown-status > button {
+    border-color: #3c763d;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.form-group.has-success .dropdown-select > button:focus,
+.form-group.has-success .dropdown-status > button:focus {
+    border-color: #2b542c;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
+}
+
+.form-group.has-warning .dropdown-select > button,
+.form-group.has-warning .dropdown-status > button {
+    border-color: #8a6d3b;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.form-group.has-warning .dropdown-select > button:focus,
+.form-group.has-warning .dropdown-status > button:focus {
+    border-color: #66512c;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
+}
+
+.form-group.has-error .dropdown-select > button,
+.form-group.has-error .dropdown-status > button {
+    border-color: #a94442;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.form-group.has-error .dropdown-select > button:focus,
+.form-group.has-error .dropdown-status > button:focus {
+    border-color: #843534;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+}
+
+.dropdown-select > button {
+    min-width: 160px;
+}
+
+.dropdown-select .dropdown-menu input.form-control {
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    width: calc(100% - 6px);
+    border-color: #ccc;
+}
+
+.dropdown-select .dropdown-menu input.form-control:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+/* ========================================
+ * タグボックスのスタイル
+ * ======================================== */
+.chip {
+    background-color: #e6f0f7;
+    color: #3c8dbc;
+    height: 24px;
+    border: 1px solid #367fa9;
+    border-radius: 4px;
+    cursor: default;
+    float: left;
+    padding: 1px 10px;
+    user-select: none;
+    text-overflow: ellipsis;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+    .chip.selected {
+        background-color: #3c8dbc;
+        color: #fff;
+    }
+
+    .chip.disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+    .chip.constant {
+        background-color: lightgoldenrodyellow;
+        color: orange;
+        border: 1px solid orange;
+    }
+
+.chip-remove-button {
+    margin-left: 5px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    opacity: 0.7;
+}
+    .chip-remove-button:hover {
+        opacity: 1;
+    }
+
+/* ========================================
+ * マルチタグフォームのスタイル
+ * ======================================== */
+.chip-form-control {
+    padding: 0;
+    overflow: auto;
+    resize: vertical;
+    min-height: 34px;
+    max-height: 200px;
+}
+
+.chip-form {
+    overflow: hidden;
+    min-height: 34px;
+    padding-bottom: 4px;
+    padding-right: 4px;
+}
+
+/* ========================================
+ * ポップアップのスタイル
+ * ======================================== */
+.popup-content {
+    background-color: #eCf0f5;
+    padding: 8px;
+    min-height: 100%;
+    /* font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "meiryo UI", sans-serif; */
+}
+
+.popup-content .box-body {
+    padding: 0px !important;
+}
+
+/* ========================================
+ * 分電盤マップのスタイル
+ * ======================================== */
+.fill-warning, .fill-warn {
+    fill: #D6A80F !important;
+}
+.fill-danger, .fill-error {
+    fill: #D9374B !important;
+}
+.fill-success {
+    fill: #48A06D !important;
+}
+
+/* ========================================
+ * インシデント一覧の行の背景色
+ * ======================================== */
+.table:not(.table-hover) > tbody > tr.error,
+.table:not(.table-hover) > tbody > tr > td.error {
+    background-color: #f7d4da;
+}
+
+.table-hover > tbody > tr.error:not(:hover),
+.table-hover > tbody > tr:not(:hover) > td.error {
+    background-color: #f7d4da;
+}
+
+.table:not(.table-hover) > tbody > tr.warn,
+.table:not(.table-hover) > tbody > tr > td.warn {
+    background-color: #fcf2cf;
+}
+
+.table-hover > tbody > tr.warn:not(:hover),
+.table-hover > tbody > tr:not(:hover) > td.warn {
+    background-color: #fcf2cf;
+}
+
+.table:not(.table-hover) > tbody > tr.syserr,
+.table:not(.table-hover) > tbody > tr > td.syserr {
+    background-color: #e6daf1;
+}
+
+.table-hover > tbody > tr.syserr:not(:hover),
+.table-hover > tbody > tr:not(:hover) > td.syserr {
+    background-color: #e6daf1;
+}
+
+/* ========================================
+ * トースト表示切替ドロップダウン用スタイル
+ * ======================================== */
+ .main-header__alarm-toast-select {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .main-header__alarm-toast-select {
+        margin-right: 5px;
+        margin-bottom: 3px;
+    }
+}
+
+/* ========================================
+ * チェック付きツリービュー用スタイル
+ * ======================================== */
+.treeview .tree-checkbox {
+    float: left !important;
+    margin-top:3px;
+}
+
+.treeview .tree-node-allow {
+    float: right !important;
+    margin-top:3px;
+}
+
+/* ========================================
+ * マルチ選択用ドロップダウン用スタイル
+ * ======================================== */
+.multiselect-container.dropdown-menu > .active > a {
+    background-color: #eee !important;
+    color: #000 !important;
+}
+
+.multiselect-container.dropdown-menu > li > a {
+    padding: 3px 0 !important;
+}
+
+/* ========================================
+ * ロード中
+ * ======================================== */
+div.loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 3px;
+}
+
+div.loading > .fa,
+div.loading > .fas,
+div.loading > .fal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: -15px;
+    color: #000;
+    font-size: 30px;
+}
+
+.rack div.loading {
+    margin-left: -2em;
+    width: -webkit-calc(100% + 2em);
+    width: calc(100% + 2em);
+    border-radius: 0px;
+}
+
+.panel {
+    position: relative;
+}
+
+
+/* ========================================
+ * ポインタのイベント操作
+ * ======================================== */
+.pointer-events-on {
+    pointer-events: auto !important;
+}
+
+
+/* ========================================
+ * 管理項目条件（ラック・ユニット）
+ * ======================================== */
+
+.condition-item {
+    margin-bottom: 10px !important;
+}
+
+.condition-item .form-group {
+    margin-bottom: 0px !important;
+}
+
+.condition-item .condition {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+}
+
+@media screen and (max-width: 768px) {    
+    .condition-item .form-group {
+        margin-bottom: 5px !important;
+    }
+
+    .condition-item .mr-05 {
+        margin-right: 0px;
+    }
+}
+
+/* ========================================
+ * 作業スケジュールカレンダーのスタイル ※制御スケジュールでも使用
+ * ======================================== */
+
+#calendar td.fc-day-top {
+    position: relative;
+    text-align: center;
+}
+
+#calendar td.fc-day-top span {
+    float:none;
+}
+
+#calendar td.fc-day-top i {
+    position: absolute;
+    right: 10px;
+    padding:3px 0px;
+    opacity: 0.2;
+}
+
+#calendar td.fc-day-top i:hover {
+    opacity: 0.8;
+}
+
+#calendar td.fc-event-container>a:hover {
+    opacity: 0.5;
+}
+
+.select-event {
+    position: relative;
+}
+
+.select-event a {
+    position: absolute;
+    left:25px;
+    right:0;
+}
+.select-event:before {
+    font-family: 'Font Awesome 5 Pro';
+    content: "\f058";
+    float: left;
+    margin-left: 5px;
+}
+
+/* ========================================
+ * 選択モーダルのDataTableのスタイル
+ * ======================================== */
+.datatable-select tr {
+    white-space: nowrap;
+}
+
+.datatable-select tbody > tr {
+    cursor: pointer;
+}
+
+/* ========================================
+ * InputForm InputTableのスタイル
+ * ======================================== */
+ .text-red {
+    color: #dd4b39 !important;
+}
+
+/* ========================================
+ * ロケーションビュー（ME）のスタイル
+ * ======================================== */
+.camera-pantilt button{
+    width:40px;
+}
+
+/*カメラ位置移動用スライダー*/
+.slider-vertical .slider-track,
+.slider-vertical .slider-selection {
+    background: #BABABA;
+}
+
+#updown .slider:before {
+    background: transparent;
+}
+
+.slider.slider-vertical {
+    height: 136px !important;
+}
+
+/* ========================================
+ * material iconsのスタイル
+ * ======================================== */
+i.material-icons {
+    top: 0.15em;
+    position: relative;
+}
+
+i.material-icons + span {
+    margin-left: 0.35em;
+}
+
+/* ========================================
+ * テンプレート選択モーダルのスタイル
+ * ======================================== */
+@media (min-width: 1300px) {
+    .modal-xlg {
+        width: 1200px;
+    }
+}
+
+/* ========================================
+ * form-group内の静的テキスト表示フォームを改行する
+ * ======================================== */
+.form-group.text-break-word .form-control-static {
+    word-break: break-word;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* ========================================
+ * httpエラー画面のスタイル
+ * ======================================== */
+.http-error-message {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.http-error-message h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.http-error-message h1, .http-error-message h3 {
+    text-align: center;
+    color: #a94442;
+    margin-bottom: 20px;
+}
+
+.http-error-message h1 i {
+    color: #a94442;
+    font-weight:bold;
+}
+
+.http-error-message p {
+    text-align: center;
+}
+
+/* ========================================
+ * 改行する
+ * ======================================== */
+.text-break-word {    
+    word-break: break-word;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* ========================================
+ * SVG textタグのスタイル
+ * ======================================== */
+text.error  {
+    fill: #D9374B !important;
+}
+
+text.warn  {
+    fill: #D6A80F !important;
+}
+
+text.success {
+    fill: #48A06D !important;
+}
+
+text.syserr {
+    fill: #9762C4 !important;
+}
+
+
+/* ========================================
+ * バッテリ監視のスタイル
+ * ======================================== */
+
+.battery-realtime-grid {
+    height: 500px;
+}
+
+.battery-realtime-grid .realtime-box {
+    min-width: 248px;
+}
+
+.battery-realtime-grid .channel-view .realtime-box.item,
+.battery-other-grid-container.battery-realtime-grid .realtime-box.item {
+    position: static;
+}
+
+.battery-realtime-grid ul.channel-view {
+    margin: 0;
+    padding: 0;
+    padding-right: 5px;
+}
+
+.battery-realtime-grid ul.channel-view > li {
+    list-style: none;
+}
+
+.battery-realtime-grid ul.channel-view > li > .channel-view-header {
+    color: #333333;
+    background-color: #f5f5f5;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-bottom: 1px solid transparent;
+}
+
+.battery-realtime-grid ul.channel-view > ul {
+    margin-bottom: 5px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 0;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    border-color: #ddd;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+.battery-other-grid-container {
+    overflow: auto;
+    max-height: 110px;
+    min-height: 50px;
+    border: 1px solid #ccc;
+    padding: 10px 0px 0px 5px;
+}
+
+.battery-realtime-option {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.battery-realtime-option > .data-option  {
+    flex-grow: 1;
+}
+
+/* ========================================
+ * データレポート用スタイル
+ * ======================================== */
+
+.datatable-report {
+    table-layout:fixed;
+}
+
+.datatable-report.fixed-width {
+    width: 180px;
+}
+
+.datatable-report td.table-header,
+.datatable-report th {
+    width: 100px;
+    word-wrap: break-word;
+    white-space: normal !important;
+}
+
+.datatable-report td.table-header-auto {
+    width: auto;
+}
+
+/* データレポートテーブル上部のオプション部のスタイル */
+.datatable-report-option-top {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.datatable-report-option-top > .option-button-toolbar  {
+    flex-grow: 1;
+}
+
+.datatable-report-option-top > .option-button-toolbar > button  {
+    margin-right: 5px;
+}
+
+.datatable-report-option-top > .option-button-toolbar > span  {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* ========================================
+ * Edge対応
+ * ======================================== */
+
+.edge-resizable-container {
+    padding-right: 18px;
+}
+
+.edge-resizable-container.textarea-container {
+    min-height: 50px;
+}
+
+.edge-resizable-container textarea {
+    height: 100%;
+}
+
+.edge-resizable-container.chip-form-container {
+    height: 34px;
+    min-height: 34px;
+    max-height: 200px;
+}
+
+.edge-resizable-container .chip-form-control {
+    height: 100%;
+}
+
+/* ========================================
+ * デマンドグラフ用
+ * ======================================== */
+.demand-graph-container {
+    position: relative;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 8px;
+    resize: vertical;
+    overflow: hidden;
+    height: 360px;
+    min-height: 300px;
+    max-height: 800px;
+    z-index: 1;
+}
+
+.demand-graph {
+    height: 100%;
+}
+
+.demand-graph-container .alarm-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.demand-graph-container .detail-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* ========================================
+ * デマンドサマリ用
+ * ======================================== */
+td.dataTables_empty {
+    text-align: left !important;
+}
+
+/* ========================================
+ * 制御コマンド関連
+ * ======================================== */
+
+/* 実行する制御のドロップダウン */
+.garmit-input-item.control-select-item {
+     width: 50%;
+ }
+
+ 
+/* ========================================
+ * 制御スケジュールカレンダーのスタイル
+ * ======================================== */
+
+.repaet-schedule.fc-content:before {
+    font-family: 'Font Awesome 5 Pro';
+    content: "\f364";
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* ========================================
+ * 電気錠マップ
+ * ======================================== */
+
+/* 電気錠マップのリンクボタンのスタイル */
+.btn.eleckey-map-transition-link {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+}
+
+.eleckey-map-update-button-gourp {
+    float: right;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 1504px) and (min-width: 1200px) {
+    .btn.eleckey-map-transition-link {
+        float: right;
+        margin-right: 0px !important;
+    }
+}
+
+/* ========================================
+ * 検索条件の追加要素（dl.dl-horizontal の拡張）
+ * ======================================== */
+
+.garmit-additional-condition {
+    margin-left: 15px;
+}
+
+.garmit-additional-condition dt {
+    width: 7em;
+    font-weight: normal;
+    text-align: left;
+    margin-top: 7px;
+    float: left;
+    clear: left;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.garmit-additional-condition dd {
+    margin-left: 7em;
+}
+
+.garmit-additional-condition.wide dt {
+    width: 11em;
+}
+
+.garmit-additional-condition.wide dd {
+    margin-left: 11em;
+}
+
+/* ========================================
+ * 案件画面
+ * ======================================== */
+
+.datatable-project-line th {
+    white-space: nowrap;
+}
+
+/* クリアボタンのツールチップ制御 */
+.patchcable-clear-button-span {
+    display: inline-block;
+}
+
+.patchcable-clear-button-span .btn:disabled {
+    pointer-events: none;
+}
+
+/* 線番ラベルフォーム */
+.patchcable-label-form .garmit-input-item:first-child {
+    width: 325px;
+}
+
+.patchcable-label-form.has-error p {
+    color: #a94442;    
+}
+
+/* InputFormのスタイル変更 */
+.line-input-form form > div > div.input-row:last-child {
+    border-bottom: 0px !important;
+}
+
+/* 未検索エラーのアラート */
+.patchcable-search-error-alert {
+    padding: 5px 10px !important;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+/* 線番のラベルのエラー時に文字の色を変更 */
+.patchcable-has-error {
+    color: #a94442;
+}
+
+/* ========================================
+ * ドロップダウンメニューのオプション
+ * ======================================== */
+
+.dropdown-menu > .dropdown-menu-options {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.dropdown-menu > .dropdown-menu-options > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857;
+    color: #333333;
+    white-space: nowrap;
+}
+  
+.dropdown-menu > .dropdown-menu-options > li > a:hover, .dropdown-menu > li > a:focus {
+    text-decoration: none;
+    color: #262626;
+    background-color: #f5f5f5;
+}
+  
+.dropdown-menu > .dropdown-menu-options > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    background-color: #4D6290;
+}
+  
+.dropdown-menu > .dropdown-menu-options > .disabled > a, .dropdown-menu > .disabled > a:hover, .dropdown-menu > .disabled > a:focus {
+    color: #777777;
+}
+  
+.dropdown-menu > .dropdown-menu-options > .disabled > a:hover, .dropdown-menu > .disabled > a:focus {
+    text-decoration: none;
+    background-color: transparent;
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    cursor: not-allowed;
+}
+
+/* ========================================
+ * メインメニュー
+ * ======================================== */
+
+/* ユーザーメニューアイテムのスタイル */
+.garmit-menu-item-user {
+    height: auto !important;
+    line-height: 1.42857 !important;
+}
+
+.garmit-menu-item-user span {
+    height: 2.8125em;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* ========================================
+ * ファイル選択（ドラッグ＆ドロップ）
+ * ======================================== */
+
+.file-drop-area {
+    border: 2px dashed gray;
+    padding: 15px;
+    text-align: center;
+}
+
+.file-drop-area.dragover {
+    border: 2px solid gray;
+    background:lightgray
+}
+
+/* ========================================
+ * SSLシール用
+ * ======================================== */
+.loginlogout-globalsign {
+    margin-top: 10px;
+}

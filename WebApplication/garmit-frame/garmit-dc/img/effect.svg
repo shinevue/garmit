@@ -1,0 +1,16 @@
+<svg data-name="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 45">
+  <filter id="drop-shadow" x="-100%" y="-100%" width="300%" height="300%">
+    <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="2" />
+    <feOffset result="offsetBlur" dx="3" dy="3" />
+    <feComponentTransfer>
+      <feFuncA type="linear" slope="0.16"/>
+    </feComponentTransfer>
+    <feMerge>
+      <feMergeNode />
+      <feMergeNode in="SourceGraphic" />
+    </feMerge>
+  </filter>
+  <clipPath id="clip" clipPathUnits="objectBoundingBox">
+    <rect x="0.5" y="0.2" width="0.5" height="0.8" />
+  </clipPath>
+</svg>

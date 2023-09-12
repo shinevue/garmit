@@ -1,0 +1,80 @@
+﻿@using System.Web.Optimization
+@using System.Configuration
+@model garmit.Web.Models.ViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @*アプリケーション名*@
+    <title>@Model.Title</title>
+
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+
+    @*Bundle CSS, assuming includes Bootstrap CSS *@
+    @Styles.Render("~/styles/bootstrap")
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    @Styles.Render("~/styles/react")
+    @Styles.Render("~/styles/jquery")
+    @Styles.Render("~/styles/fonts")
+    @switch (ConfigurationManager.AppSettings["Series"])
+    {
+        case "ME":
+            @Styles.Render("~/styles/garmit-me")
+            break;
+        case "SC":
+            @Styles.Render("~/styles/garmit-sc")
+            break;
+        default:
+            @Styles.Render("~/styles/garmit-dc")
+            break;
+    }
+    @Styles.Render("~/styles/sitecss")
+    @Styles.Render("~/styles/buildcss")
+
+</head>
+<body class='popup-content'>
+    @*ライブラリ*@
+    @*ライブラリ*@
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jquery-ui")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/react")
+    @Scripts.Render("~/bundles/redux")
+    @Scripts.Render("~/bundles/babel")   
+    @switch (ConfigurationManager.AppSettings["Series"])
+    {
+        case "ME":
+            @Scripts.Render("~/bundles/garmit-me")
+            break;
+        case "SC":
+            @Scripts.Render("~/bundles/garmit-sc")
+            break;
+        default:
+            @Scripts.Render("~/bundles/garmit-dc")
+            break;
+    }
+    <script type="text/javascript">
+
+        window.document.onkeydown = function () {
+            //F5を無効にする
+            if (event.keyCode == 116) {
+                event.keyCode = null;
+                return false;
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+﻿@using System.Web.Optimization
+@using System.Configuration
+@using garmit.Web.Helpers
+@model garmit.Web.Models.ViewModel
+
+@{
+    string imageFolder = "";
+    switch (ConfigurationManager.AppSettings["Series"])
+    {
+        case "ME":
+            imageFolder = "/garmit-frame/garmit-me/img/";
+            break;
+        case "SC":
+            imageFolder = "/garmit-frame/garmit-sc/img/";
+            break;
+        default:
+            imageFolder = "/garmit-frame/garmit-dc/img/";
+            break;
+    }
+
+    string logoUrl = imageFolder + "logo.svg";
+    string logoSidebarUrl = imageFolder + "logo_sidebar.svg";
+    string closeUrl = imageFolder + "btn_close_l.png";
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="IE=Edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="noindex,nofollow">
+
+        @*アプリケーション名*@
+        <title>@Model.Title - @ConfigurationManager.AppSettings["Title"]</title>
+
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+
+        @*Bundle CSS, assuming includes Bootstrap CSS *@
+        @Styles.Render("~/styles/bootstrap")
+
+        @Styles.Render("~/styles/react")    
+        @Styles.Render("~/styles/jquery")
+
+        @switch (ConfigurationManager.AppSettings["Series"])
+        {
+            case "ME":
+                @Styles.Render("~/styles/garmit-me")
+                break;
+            case "SC":
+                @Styles.Render("~/styles/garmit-sc")
+                break;
+            default:
+                @Styles.Render("~/styles/garmit-dc")
+                break;
+        }
+
+        @Styles.Render("~/styles/sitecss")
+        @Styles.Render("~/styles/buildcss")
+
+    </head>
+
+    <body class="gdc-body">
+
+        <header class="main-header">
+            <nav class="main-header__navbar">
+            <div class="main-header__logo"><span class="main-header__logo-image"><img src="@logoUrl" alt="@ConfigurationManager.AppSettings["Title"]"></span></div>
+            <div class="main-header__alarm" id="alarmHeaderContainer">
+            </div>
+            <div class="main-header__page-title">
+                <h1 class="main-header__page-title-text-wrapper">
+                    <span class="main-header__page-title-text"><span class="@Model.IconClass">@Model.FunctionName</span></span>
+                </h1>
+            </div>
+        </nav>
+        </header>
+
+        <div class="wrapper" id="rootContainer"></div>
+
+        <aside class="main-sidebar">
+            <section class="sidebar">
+                <div class="main-sidebar__header">
+                    <div class="main-sidebar__title">
+                        <span class="main-sidebar__logo-image"><img src="@logoSidebarUrl" alt="@ConfigurationManager.AppSettings["Title"]"></span>
+                    </div>
+                    <div class="main-sidebar__dashboard"><a href="/Top"><span class="icon-garmit-dashboard">ダッシュボード</span></a></div>
+                </div>
+                <div id="menuContainer">
+                </div>
+            </section>
+            <footer class="sidebar-footer">
+                <div class="sidebar-footer__copyright">@AssemblyHelpers.GetCopyright()</div>
+                <div class="sidebar-footer__license">Version @AssemblyHelpers.GetVersion()</div>
+            </footer>
+        </aside>
+
+        <aside class="alarm-sidebar">            
+            <div class="alarm-sidebar--close"><a href="#"><img src="@closeUrl" alt="close"></a></div>
+            <div id="alarmContainer"></div>            
+        </aside>
+
+        @*ライブラリ*@
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jquery-ui")
+        @Scripts.Render("~/bundles/jqplot")
+        @Scripts.Render("~/bundles/bootstrap")
+        @Scripts.Render("~/bundles/react")
+        @Scripts.Render("~/bundles/redux")
+        @Scripts.Render("~/bundles/babel")
+        @Scripts.Render("~/bundles/other")
+        @Scripts.Render("~/bundles/cleared")
+
+        @switch (ConfigurationManager.AppSettings["Series"])
+        {
+            case "ME":
+                @Scripts.Render("~/bundles/garmit-me")
+                break;
+            case "SC":
+                @Scripts.Render("~/bundles/garmit-sc")
+                break;
+            default:
+                @Scripts.Render("~/bundles/garmit-dc")
+                break;
+        }
+
+        @Scripts.Render("~/bundles/sitejs")
+
+        @* ViewBagの情報をセットする *@
+        <script type="text/javascript">
+            const application = {
+                appSettings: @HtmlHelpers.ToJson(Html, Model.AppSettings),
+                systemId: @HtmlHelpers.ToJson(Html, Model.SystemId)
+            };
+        </script>
+
+        @* ここを画面ごとのスクリプトを設定します。 *@
+        @RenderBody()
+
+        <script src="~/build/mainSidebar.bundle.js"></script>
+        <script src="~/build/mainHeaderAlarm.bundle.js"></script>
+        <script src="~/build/alarmSidebar.bundle.js"></script>
+
+
+    </body>
+</html>
+

@@ -1,0 +1,83 @@
+﻿
+@using System.Web.Optimization
+@using System.Configuration
+@using garmit.Web.Helpers
+@model garmit.Web.Models.ViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @*アプリケーション名*@
+    <title>Error - @ConfigurationManager.AppSettings["Title"]</title>
+
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+
+    @*Bundle CSS, assuming includes Bootstrap CSS *@
+    @Styles.Render("~/styles/bootstrap")
+
+    @switch (ConfigurationManager.AppSettings["Series"])
+    {
+        case "ME":
+            @Styles.Render("~/styles/garmit-me")
+            break;
+        case "SC":
+            @Styles.Render("~/styles/garmit-sc")
+            break;
+        default:
+            @Styles.Render("~/styles/garmit-dc")
+            break;
+    }
+
+    @Styles.Render("~/styles/sitecss")
+
+    @*<script>
+            FontAwesomeConfig = { searchPseudoElements: true };
+        </script>
+        @Scripts.RenderFormat("<script src='{0}' defer></script>", "~/bundles/fontsdefer")*@
+
+</head>
+
+<body class="login-page">
+    <div class="wrapper">
+        <div class="login-box">
+            <div class="login-box-body" id="rootContainer">
+                <div class="mtb-1 http-error-message">
+                    <h1>
+                        <i class="fal fa-exclamation-triangle"></i>@Model.ErrorMessage.ErrorCode
+                    </h1>
+                    <h3>@Model.ErrorMessage.ErrorMessage</h3>
+                    <p>@Model.ErrorMessage.ErrorDetailMessage</p>
+                </div>
+                <div class="ta-c">
+                    <button class="btn btn-link" onclick="location.href='/'" >ログイン画面へ</button>
+                </div>
+            </div>
+        </div>
+        <footer class="lockscreen-footer">
+            <div>@AssemblyHelpers.GetCopyright()</div>
+            <div><a href="/License">LICENSE</a>&nbsp;Version @AssemblyHelpers.GetVersion()</div>
+        </footer>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @switch (ConfigurationManager.AppSettings["Series"])
+    {
+        case "ME":
+            @Scripts.Render("~/bundles/garmit-me")
+            break;
+        case "SC":
+            @Scripts.Render("~/bundles/garmit-sc")
+            break;
+        default:
+            @Scripts.Render("~/bundles/garmit-dc")
+            break;
+    }
+</body>
+</html>
+

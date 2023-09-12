@@ -1,0 +1,24 @@
+﻿/**
+ * @license Copyright 2017 DENSO
+ * 
+ * Storeを生成する
+ */
+
+'use strict';
+
+import { createStore } from 'redux';
+
+/**
+ * ストアを生成する
+ * @param {*} reducer 
+ * @param {*} initialState 
+ */
+export default function configureStore(reducer, initialState) {
+
+    const store = createStore(
+        reducer, 
+        initialState, 
+        window.devToolsExtension && window.devToolsExtension());
+
+    return store;
+}

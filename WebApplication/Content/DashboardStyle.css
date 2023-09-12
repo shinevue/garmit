@@ -1,0 +1,68 @@
+.dashboard .links, .dashboard .navigations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dashboard .links-item, .dashboard .navigations-item {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+  margin-left: 30px;
+  text-align: center;
+}
+
+.dashboard .links-item:first-child, .dashboard .navigations-item:first-child {
+  margin-left: 0;
+}
+
+.dashboard .dashboard-item {
+  margin-bottom: 20px;
+}
+
+.dashboard .links-item {
+  padding: 0.75em 0.5em;
+  display: block;
+}
+
+.dashboard .navigations-item {
+  display: block;
+  padding: 2em 0.5em;
+}
+
+.dashboard .widget-setting {
+  cursor: move;
+}
+
+.dashboard .widget-setting .navbar {
+  background-color: #dddada;
+  border: none;
+}
+
+.dashboard .widget-setting .navbar-brand {
+  color: #333;
+}
+
+.dashboard .widget-container.read-only .widget-setting {
+  cursor: not-allowed;
+}
+
+@media (min-width: 1300px) {
+  .widget-setting-modal.modal-xlg {
+    width: 95%;
+  }
+}
+
+.widget-setting-modal table th.single-action {
+  width: 40px;
+}
+
+.btn-circle.btn-link {
+  color: #333;
+}
+
+.btn-circle.btn-link:hover {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}

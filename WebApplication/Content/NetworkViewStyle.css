@@ -1,0 +1,89 @@
+﻿/**
+ * garmit ネットワーク経路表示で使用するスタイル
+ * last modified 2018/7/13
+ *
+ */
+
+/* ========================================
+ * ネットワーク経路の描画エリアのスタイル
+ * ======================================== */
+
+.network-view div.network-view-base {
+    outline: 2px solid black;
+    margin-top: 5px;
+}
+ 
+/* ========================================
+ * ネットワーク名称のスタイル
+ * ======================================== */
+
+.network-view .network-view-network-name .network-name-rect {
+    fill: #999;
+    stroke: #707070;
+    stroke-width: 1px;
+    cursor: pointer;
+}
+
+.network-view .network-view-network-name.selected .network-name-rect {
+    fill: #458DCB;
+}
+
+.network-view .network-view-network-name .network-name-text {
+    fill: white;
+    font-size: 10px;  
+    font-weight: bold; 
+}
+
+.network-view .network-view-network-name.can-drag .network-name-rect {
+    cursor: auto;
+}
+
+/* ========================================
+ * ネットワーク接続ラインのスタイル
+ * ======================================== */
+
+.network-view .network-view-network-line {
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.network-view .network-view-network-line.selected {
+    stroke: #458DCB;
+    stroke-width: 3px;
+}
+
+/* ========================================
+ * ユニットのスタイル
+ * ======================================== */
+.network-view .unit .unit-rect {
+    stroke: #333;
+    stroke-width: 1px;
+    font-weight: bold;
+}
+
+.network-view .unit.selected .unit-rect {
+    stroke: #458DCB;
+    stroke-width: 4px;
+}
+
+.network-view .unit .unit-text {
+    font-weight: bold; 
+}
+
+.network-view .unit.has-image .background-text {
+    fill: rgba(255, 255, 255, 0.8);
+}
+
+.network-view-unit-popover .popover-content {
+    min-width: 200px;
+}
+
+.network-view-unit-popover .popover-title {    
+    word-break: break-word;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.network-view .unit.can-drag {
+    cursor: move;
+}
