@@ -74,6 +74,9 @@ _[Ss]cripts
 *.ncrunchsolution
 *.dot[Cc]over
 ######################
-#  Add node_modules  #
+#   Add  customize   #
 ######################
 node_modules
+package-lock.json
+build
+.vs
